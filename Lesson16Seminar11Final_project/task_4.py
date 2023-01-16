@@ -8,8 +8,8 @@
 Подсказки:
 --- используйте списки и циклы, не дублируйте функции
 """
-list = ['разработка', 'администрирование', 'protocol', 'standard']
-for word in list:
-    p = word.encode('utf-8', 'replace')
-    word_decode = p.decode('utf-8')
-    print(word, p, word_decode)
+lst = ['разработка', 'администрирование', 'protocol', 'standard']
+for word in lst:
+    word_byte = word.encode('utf-8', 'replace')
+    word_decode = word_byte.decode('utf-8')
+    print(word, word_byte, word_decode)

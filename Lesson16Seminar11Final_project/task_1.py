@@ -21,6 +21,7 @@
 """
 
 # Первый вариант
+print('Первый вариант')
 str1 = 'разработка'
 str2 = 'сокет'
 str3 = 'декоратор'
@@ -28,27 +29,26 @@ print(type(str1), type(str2), type(str3))
 print(str1, str2, str3)
 print()
 # Преобразование в набор кодовых точек Unicode через сайт https://unicode-table.com/ru/
-s1_u = u'\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430'
-s2_u = u'\u0441\u043e\u043a\u0435\u0442'
-s3_u = u'\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440'
-print(type(s1_u), type(s2_u), type(s3_u))
-print(s1_u, s2_u, s3_u)
+str1_uni = '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430'
+str2_uni = '\u0441\u043e\u043a\u0435\u0442'
+str3_uni = '\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440'
+print(type(str1_uni), type(str2_uni), type(str3_uni))
+print(str1_uni, str2_uni, str3_uni)
 print()
 
 # Второй вариант
-list = ['разработка', 'сокет', 'декоратор']
+print('Второй вариант')
+lst = ['разработка', 'сокет', 'декоратор']
 
-for line in list:
+for line in lst:
     print('тип переменной: {}'.format(type(line)))
     print('содержание переменной - {}'.format(line))
-    print('длинна строки: {}'.format(len(line)))
     print()
 
-list_u = [u'\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430',
-          u'\u0441\u043e\u043a\u0435\u0442',
-          u'\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440']
-for line in list_u:
+lst_uni = ['\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430',
+          '\u0441\u043e\u043a\u0435\u0442',
+          '\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440']
+for line in lst_uni:
     print('тип переменной: {}'.format(type(line)))
     print('содержание переменной - {}'.format(line))
-    print('длинна строки: {}'.format(len(line)))
     print()

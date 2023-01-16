@@ -20,9 +20,9 @@ print(len(str1), len(str2), len(str3))
 print('\n')
 
 # Второй вариант
-list = [b'class', b'function', b'method']
+lst = [b'class', b'function', b'method']
 
-for line in list:
+for line in lst:
     print('тип переменной: {}'.format(type(line)))
     print('содержание переменной - {}'.format(line))
     print('длинна строки: {}'.format(len(line)))

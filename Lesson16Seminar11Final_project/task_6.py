@@ -31,10 +31,10 @@ import chardet
 def_cod = locale.getpreferredencoding()
 print(f"Кодировка по умолчанию:  {def_cod}")
 
-file = open('test_file.txt', 'r')
-file.close()
+file_txt = open('test_file.txt', 'r')
+file_txt.close()
 # выдает <_io.TextIOWrapper name='test_file.txt' mode='r' encoding='cp1251'>
-print(file)
+print(file_txt)
 
 print()
 
@@ -43,4 +43,5 @@ with open('test_file.txt', 'rb') as in_file:
         el_str_bytes = chardet.detect(el_str)
         el_str_u = el_str.decode(el_str_bytes['encoding']).encode('utf-8')
         print(type(el_str_u))
+        print(el_str_u)
         print(el_str_u.decode('utf-8'))
