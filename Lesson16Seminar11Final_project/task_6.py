@@ -41,7 +41,8 @@ print()
 with open('test_file.txt', 'rb') as in_file:
     for el_str in in_file:
         el_str_bytes = chardet.detect(el_str)
-        el_str_u = el_str.decode(el_str_bytes['encoding']).encode('utf-8')
-        print(type(el_str_u))
-        print(el_str_u)
-        print(el_str_u.decode('utf-8'))
+        el_str_utf = el_str.decode(el_str_bytes['encoding']).encode('utf-8')
+        print(type(el_str_utf))
+        print(el_str_utf)
+        print(el_str_utf.decode('utf-8'))
+

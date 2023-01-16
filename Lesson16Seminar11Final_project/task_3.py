@@ -10,8 +10,8 @@
 придумайте как это сделать
 """
 lst = ['attribute', 'класс', 'функция', 'type']
-for s in lst:
+for atr in lst:
     try:
-        print(s, type(s), s.encode('ascii'), ' - кодирование в байты прошло успешно ')
+        print(atr, type(atr), atr.encode('ascii'), ' - кодирование в байты прошло успешно ')
     except:
-        print(s, type(s), ' - невозможно записать в байтовом типе ')
+        print(atr, type(atr), ' - невозможно записать в байтовом типе ')
