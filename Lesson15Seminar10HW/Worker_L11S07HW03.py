@@ -5,9 +5,9 @@
 class IsString:
     def __set__(self, instance, value):
         if type(value) != str:
-            raise TypeError(f'The {self.my_attr} must be a string!')
+            raise TypeError(f' {self.my_attr} должно быть строка!')
         elif not value.istitle():
-            raise ValueError(f'The {self.my_attr} must be capitalized!')
+            raise ValueError(f' {self.my_attr} должно быть написано с заглавной буквы!')
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
@@ -17,9 +17,9 @@ class IsString:
 class NonNegative:
     def __set__(self, instance, value):
         if type(value) not in (int, float):
-            raise TypeError(f'The {self.my_attr} must be a number!')
+            raise TypeError(f' {self.my_attr} должно быть число!')
         elif value < 0:
-            raise ValueError(f'The {self.my_attr} must be a non-negative number!')
+            raise ValueError(f' {self.my_attr} должно быть неотрицательным числом!')
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
@@ -51,4 +51,4 @@ class Position(Worker):
         return self.wage + self.bonus
 
     def __str__(self):
-        return f"Name: {self.get_full_name()}\nSalary: {self.get_total_income()}\n"
+        return f"Имя: {self.get_full_name()}\nЗарплата: {self.get_total_income()}\n"

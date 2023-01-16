@@ -10,7 +10,7 @@ class Worker:
         self.name = name
         self.surname = surname
         self.position = position
-        self._income = {'wage': wage, 'bonus': bonus}
+        self._income = {'заработная плата': wage, 'премия': bonus}
 
 
 class Position(Worker):
@@ -27,14 +27,14 @@ class Position(Worker):
         #print(f'Employee salary is: {sum(self._income.values())}')
 
     def __str__(self):
-        return f"Name: {self.get_full_name()}\nSalary: {self.get_total_income()}"
+        return f"Имя: {self.get_full_name()}\nЗарплата: {self.get_total_income()}"
 
 
 wage = randint(50, 150)
 bonus = randint(wage//4, wage//2)
 #print(wage, bonus)
 
-ak = Position('Kevin', 'Brown', 'Agent', wage*1000, bonus*1000)
+ak = Position('Алекс', 'Смирнов', 'Сотрудник', wage*1000, bonus*1000)
 print(ak.position, ak.name, ak.surname, ak._income)
 print(ak.get_full_name())
 print(ak.get_total_income())

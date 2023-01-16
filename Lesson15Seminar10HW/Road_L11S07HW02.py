@@ -11,9 +11,9 @@ class Singleton(type):
 class IsPositive:
     def __set__(self, instance, value):
         if type(value) not in (int, float):
-            raise TypeError(f'The {self.my_attr} must be a number!')
+            raise TypeError(f' {self.my_attr} должно быть число!')
         elif value <= 0:
-            raise ValueError(f'The {self.my_attr} must be a positive number!')
+            raise ValueError(f' {self.my_attr} должно быть положительным числом!')
         instance.__dict__[self.my_attr] = value
 
     def __set_name__(self, owner, my_attr):
